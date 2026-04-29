@@ -1,10 +1,18 @@
-# Lead Management System
-
-A simple fullstack Lead Management application built as a technical assessment.
+# 🚀 Lead Management System
 
 ---
 
-## 🚀 Tech Stack
+## 🌐 Live Demo
+
+* 🔗 **Frontend (Vercel)**
+  https://lead-management-system-nine-tau.vercel.app/
+
+* 🔗 **Backend API (Railway)**
+  https://lead-management-system-production-c38c.up.railway.app/
+
+---
+
+## 🧰 Tech Stack
 
 ### Frontend
 
@@ -18,18 +26,49 @@ A simple fullstack Lead Management application built as a technical assessment.
 * Express.js
 * MongoDB (Mongoose)
 
+### Deployment
+
+* Vercel (Frontend)
+* Railway (Backend)
+* MongoDB Atlas (Database)
+
 ---
 
-## 📦 Features
+## ✨ Features
 
 * Create new leads
 * View all leads
-* Basic validation (frontend & backend)
-* Clean API structure
+* Form validation (frontend & backend)
+* RESTful API design
+* Clean and modular code structure
+* Environment-based configuration
 
 ---
 
-## ⚙️ Setup Instructions
+## 📁 Project Structure
+
+```
+lead-management-system/
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── ...
+│
+├── frontend/
+│   ├── src/
+│   │   ├── app/
+│   │   ├── components/
+│   │   └── ...
+│   └── ...
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Local Setup
 
 ### 1. Clone Repository
 
@@ -47,7 +86,7 @@ cd backend
 npm install
 ```
 
-Create `.env` file based on `.env.example`:
+Create `.env` file:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -60,7 +99,7 @@ Run backend:
 npm run dev
 ```
 
-Backend will run on:
+Backend runs on:
 
 ```
 http://localhost:4000
@@ -75,7 +114,7 @@ cd frontend
 npm install
 ```
 
-Create `.env.local`:
+Create `.env`:
 
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:4000
@@ -87,7 +126,7 @@ Run frontend:
 npm run dev
 ```
 
-Frontend will run on:
+Frontend runs on:
 
 ```
 http://localhost:3000
@@ -103,16 +142,44 @@ http://localhost:3000
 POST /leads
 ```
 
-### Get Leads
+### Get All Leads
 
 ```
 GET /leads
 ```
+
+### Health Check
+
+```
+GET /health
+```
+
+---
+
+## 🛡️ Validation
+
+### Backend (Mongoose)
+
+* Name length validation
+* Email format validation
+* Status enum validation
+
+### Frontend
+
+* Required fields validation
+* Email format check
+* Basic UX feedback
+
+---
+
+## 📌 Notes
+
+* MongoDB Atlas is used as the cloud database.
+* Ensure your IP is whitelisted (`0.0.0.0/0`) for development.
+* Environment variables are required for both frontend and backend.
 
 ---
 
 ## 👤 Author
 
 **Asher Azriel Ginting**
-
----
